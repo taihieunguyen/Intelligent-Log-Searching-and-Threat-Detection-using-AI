@@ -20,7 +20,7 @@ This project develops an intelligent security system integrating AI, Suricata, a
 - **/scripts/**: Utility scripts for log parsing, data preprocessing, and automation.
 - **/docs/**: Documentation and guides for deployment and usage.
 
----
+
 
 ## Prerequisites
 - Python 3.x
@@ -28,14 +28,13 @@ This project develops an intelligent security system integrating AI, Suricata, a
 - Log sources (e.g., system logs, network logs)
 - Optional: Elasticsearch, Logstash, Kibana for enhanced log management
 
----
 
 ## Usage
 - **Log Analysis**: Process logs using provided scripts to extract meaningful insights.
 - **Threat Detection**: Deploy AI models to monitor logs and detect anomalies.
 - **Visualization**: Use custom dashboards to visualize security events and trends.
 
----
+
 
 ## Contributing
 Contributions are welcome! To contribute:
