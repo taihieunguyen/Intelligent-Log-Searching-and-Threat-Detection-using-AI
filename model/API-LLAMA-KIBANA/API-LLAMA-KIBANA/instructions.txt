@@ -1,0 +1,10 @@
+curl -fsSL https://ollama.com/install.sh | sh
+ollama serve &
+ollama run llama3.2:latest
+
+
+# library code
+sudo apt install python3-pip
+pip install fastapi uvicorn openai jinja2 aiofiles requests
+
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trợ lý Kibana - Hỏi & Đáp</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; }
+    .box { background: #f6f6f6; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+    a.button {
+      background: #007acc;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      padding: 10px 18px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    pre {
+      background: #222;
+      color: #0f0;
+      font-size: 18px;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    .error { color: red; }
+  </style>
+</head>
+<body>
+  <h1>Trợ lý Kibana - Hỏi & Đáp</h1>
+  <form method="post" action="/search">
+    <label for="prompt"><strong>Nhập câu hỏi (tiếng Việt hoặc tiếng Anh):</strong></label><br>
+    <input type="text" id="prompt" name="prompt" style="width:60%;padding:8px;" required
+           value="{{ prompt if prompt is defined else '' }}">
+    <button type="submit" style="padding:8px 16px;">Tìm kiếm</button>
+  </form>
+
+  {% if prompt is defined %}
+    <div class="box">
+      <p><strong>📌 Câu hỏi:</strong> {{ prompt }}</p>
+      <p><strong>🔍 Truy vấn KQL:</strong></p>
+      {% if kql %}
+        <pre>{{ kql }}</pre>
+        <a href="{{ kibana_url }}" target="_blank" class="button">Mở trong Kibana</a>
+      {% endif %}
+    </div>
+    <p style="color:#888;font-size:15px;">
+      Nếu không thấy log, hãy kiểm tra lại quyền truy cập, thời gian trên Discover hoặc làm mới trang Kibana.<br>
+      Nếu bị yêu cầu đăng nhập, hãy đăng nhập bằng tài khoản Kibana của bạn rồi thử lại.
+    </p>
+  {% endif %}
+</body>
+</html>
