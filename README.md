@@ -18,7 +18,7 @@ This project develops an intelligent security system integrating AI, Suricata, a
 - **/configs/**: Configuration files for setting up log ingestion and processing.
 - **/models/**: Machine learning models and scripts for training and inference.
 - **/scripts/**: Utility scripts for log parsing, data preprocessing, and automation.
-- **/docs/**: Documentation and guides for deployment and usage.
+- **/report/**: Documentation and guides for deployment and usage.
 
 
 
