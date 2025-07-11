@@ -24,7 +24,6 @@ This project develops an intelligent security system integrating AI, Suricata, a
 
 ## Prerequisites
 - Python 3.x
-- Required libraries (listed in `/models/requirements.txt`)
 - Log sources (e.g., system logs, network logs)
 - Optional: Elasticsearch, Logstash, Kibana for enhanced log management
 
